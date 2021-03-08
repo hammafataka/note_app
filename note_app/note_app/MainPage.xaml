@@ -4,21 +4,133 @@
              x:Class="note_app.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
 
+        <Frame BackgroundColor="OrangeRed" Padding="24" CornerRadius="0">
+            <Label Text="Notes" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            
+            
+        </Frame>
+        
+        
+        <AbsoluteLayout  Padding="10">
+
+            <Label Text="Enter Title:"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Black"
+               
+               >
+
+            </Label>
+            <Entry 
+                WidthRequest="30"
+                AbsoluteLayout.LayoutBounds="0,0,400,90"
+               >
+
+
+            </Entry>
+        </AbsoluteLayout>
+        <AbsoluteLayout Padding="10" HeightRequest="190" >
+
+            <Label Text="Enter Details:"
+               HorizontalOptions="Start" 
+               VerticalOptions="Start"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Black"
+               
+               >
+
+            </Label>
+            <Editor 
+                WidthRequest="400"
+                HeightRequest="80"
+                AbsoluteLayout.LayoutBounds="0,40,400,90"
+               >
+
+
+            </Editor>
+            <Label Text="Pick a date"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Black"
+               AbsoluteLayout.LayoutBounds="0,185.5,180,100"
+               
+               >
+
+            </Label>
+            <DatePicker MinimumDate="01/01/2000"
+                        MaximumDate="01/01/2100"
+                        WidthRequest="90"
+                        FontSize="Large"
+                        AbsoluteLayout.LayoutBounds="110,175,160,50"
+                        x:Name="datePicker1"
+                        >
+                
+                
+                
+            </DatePicker>
+           
+
+        </AbsoluteLayout>
+        <AbsoluteLayout Padding="10">
+
+            <Label Text="Status:"
+               HorizontalOptions="Start"
+               VerticalOptions="EndAndExpand"
+               FontSize="20"
+               FontAttributes="Bold"
+               AbsoluteLayout.LayoutBounds="0,50,300,23"
+               TextColor="Black"
+               
+               >
+
+            </Label>
+            <CheckBox IsChecked="False"
+                      HorizontalOptions="StartAndExpand"
+                      VerticalOptions="End"
+                      Color="Black"
+                      AbsoluteLayout.LayoutBounds="100,50,150,30"
+                      
+                      >
+
+
+            </CheckBox>
+        </AbsoluteLayout>
+        <AbsoluteLayout Padding="10" >
+            <Button 
+                    x:Name="createButton"
+                    AbsoluteLayout.LayoutBounds="50,0,300,60"
+                    CornerRadius="20"
+                    Clicked="createButton_Clicked"
+                    Text="Create"
+                    
+                    >
+
+
+            </Button>
+
+            <!--<ImageButton 
+                    x:Name="createButton"
+                    AbsoluteLayout.LayoutBounds="50,0,300,60"
+                    CornerRadius="20"
+                    Clicked="createButton_Clicked"
+                    Source="create.jpg" 
+                    Aspect="AspectFill"
+                    
+                    >
+                
+                
+            </ImageButton>-->
+            
+            
+            
+        </AbsoluteLayout>
+
+    </StackLayout>
+   
 </ContentPage>

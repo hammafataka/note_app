@@ -13,6 +13,14 @@ namespace note_app
         public MainPage()
         {
             InitializeComponent();
+
         }
+
+        async void createButton_Clicked(object sender, EventArgs e)
+        {
+            NoteDetailsPage note = new NoteDetailsPage();
+            await Navigation.PushModalAsync(note);
+        }
+    
     }
 }
