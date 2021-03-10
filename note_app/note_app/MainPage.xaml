@@ -27,6 +27,7 @@
             <Entry 
                 WidthRequest="30"
                 AbsoluteLayout.LayoutBounds="0,0,400,90"
+                x:Name="entryTitle"
                >
 
 
@@ -40,7 +41,6 @@
                FontSize="20"
                FontAttributes="Bold"
                TextColor="Black"
-               
                >
 
             </Label>
@@ -48,6 +48,7 @@
                 WidthRequest="400"
                 HeightRequest="80"
                 AbsoluteLayout.LayoutBounds="0,40,400,90"
+                x:Name="editorMain"
                >
 
 
@@ -95,6 +96,7 @@
                       VerticalOptions="End"
                       Color="Black"
                       AbsoluteLayout.LayoutBounds="100,50,150,30"
+                      x:Name="checkBoxStatus"
                       
                       >
 
