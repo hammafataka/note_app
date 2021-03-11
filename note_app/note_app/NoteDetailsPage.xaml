@@ -43,15 +43,22 @@
                    FontAttributes="Bold"
                    AbsoluteLayout.LayoutBounds="290,80,100,70"
                    x:Name="statusLbl"
+                   
                    />
             <Button Text="share" 
                     x:Name="shareBtn"
                     AbsoluteLayout.LayoutBounds="0,500,150,50"
-                    CornerRadius="20"/>
+                    CornerRadius="20"
+                    Clicked="shareBtn_Clicked"
+                    
+                    />
             <Button Text="Save"
                     x:Name="saveBtn"
                     AbsoluteLayout.LayoutBounds="250,500,150,50"
-                    CornerRadius="20"/>
+                    CornerRadius="20"
+                    Clicked="saveBtn_Clicked"
+                    />
+  
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
